@@ -6,13 +6,13 @@
 /*   By: TheTerror <jfaye@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 17:41:23 by TheTerror         #+#    #+#             */
-/*   Updated: 2023/01/24 13:11:12 by TheTerror        ###   ########lyon.fr   */
+/*   Updated: 2023/01/27 17:30:16 by TheTerror        ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_push_swap.h"
 
-boole	ft_check_doubl(t_list **lst)
+t_bool	ft_check_doubl(t_list **lst)
 {
 	t_list	*elm1;
 	t_list	*elm2;
@@ -33,7 +33,7 @@ boole	ft_check_doubl(t_list **lst)
 	return (__TRUE);
 }
 
-boole	ft_fit_in_int(char *arg)
+t_bool	ft_fit_in_int(char *arg)
 {
 	int			i;
 	int			sign;
@@ -62,7 +62,7 @@ boole	ft_fit_in_int(char *arg)
 	return (__TRUE);
 }
 
-boole	ft_is_int(char *arg)
+t_bool	ft_is_int(char *arg)
 {
 	int	i;
 

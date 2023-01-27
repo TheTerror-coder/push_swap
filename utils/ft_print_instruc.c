@@ -6,14 +6,14 @@
 /*   By: TheTerror <jfaye@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 18:33:13 by TheTerror         #+#    #+#             */
-/*   Updated: 2023/01/20 19:13:15 by TheTerror        ###   ########lyon.fr   */
+/*   Updated: 2023/01/27 17:32:01 by TheTerror        ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_push_swap.h"
 
 /*Affiche les instructions executées pour trier la liste*/
-void	ft_print_instruc(instr instruc)
+void	ft_print_instruc(t_instr instruc)
 {
 	if (instruc == SA)
 		ft_putendl_fd("sa", 1);

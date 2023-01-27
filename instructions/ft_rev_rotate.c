@@ -6,7 +6,7 @@
 /*   By: TheTerror <jfaye@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 13:38:48 by TheTerror         #+#    #+#             */
-/*   Updated: 2023/01/26 18:00:14 by TheTerror        ###   ########lyon.fr   */
+/*   Updated: 2023/01/27 18:22:19 by TheTerror        ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	ft_op_rev_rotate(t_list **list)
 	}
 }
 
-void	ft_rev_rotate(instr instruc, t_list **a, t_list **b)
+void	ft_rev_rotate(t_instr instruc, t_list **a, t_list **b)
 {
 	if (instruc == RRA)
 	{
@@ -50,8 +50,6 @@ void	ft_rev_rotate(instr instruc, t_list **a, t_list **b)
 		ft_op_rev_rotate(b);
 		ft_print_instruc(instruc);
 	}
-	else
-		printf("Probléme!!\n");
 }
 
 void	ft_try_rev_rotate(t_list **a, t_list **b)

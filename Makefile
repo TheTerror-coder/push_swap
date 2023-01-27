@@ -6,7 +6,7 @@
 #    By: TheTerror <jfaye@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/18 19:26:46 by TheTerror         #+#    #+#              #
-#    Updated: 2023/01/25 19:26:56 by TheTerror        ###   ########lyon.fr    #
+#    Updated: 2023/01/27 18:11:04 by TheTerror        ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ UTILS_PATH = utils/
 INSTRUCTIONS_PATH = instructions/
 LIBFT_PATH = libft/
 
-INCLUDE = $(LIBFT_PATH)libft.h $(UTILS_PATH)ft_utils.h \
+INCLUDE = ft_push_swap.h ft_preprocss.h $(LIBFT_PATH)libft.h $(UTILS_PATH)ft_utils.h \
 			$(INSTRUCTIONS_PATH)ft_instructions.h
 CFLAGS = 	-Wall -Werror -Wextra
 CC = 		cc

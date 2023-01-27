@@ -6,13 +6,13 @@
 /*   By: TheTerror <jfaye@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 13:08:58 by TheTerror         #+#    #+#             */
-/*   Updated: 2023/01/25 19:33:13 by TheTerror        ###   ########lyon.fr   */
+/*   Updated: 2023/01/27 18:19:37 by TheTerror        ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_push_swap.h"
 
-assert	ft_cmp_content(t_list *elm1, t_list *elm2)
+t_assert	ft_cmp_content(t_list *elm1, t_list *elm2)
 {
 	if (!elm1 || !elm2)
 		return (__NULL);
@@ -25,33 +25,33 @@ assert	ft_cmp_content(t_list *elm1, t_list *elm2)
 	return (0);
 }
 
-boole	ft_is_sorted(t_list *lst)
+t_bool	ft_is_sorted(t_list *lst)
 {
 	if (!lst)
 		return (__NULL);
 	while (lst && lst->next)
 	{
 		if (ft_cmp_content(lst, lst->next) == SUPERIOR)
-				return (__FALSE);
+			return (__FALSE);
 		lst = lst->next;
 	}
 	return (__TRUE);
 }
 
-boole	ft_rev_sorted(t_list *lst)
+t_bool	ft_rev_sorted(t_list *lst)
 {
 	if (!lst)
 		return (__NULL);
 	while (lst && lst->next)
 	{
 		if (ft_cmp_content(lst, lst->next) == INFERIOR)
-				return (__FALSE);
+			return (__FALSE);
 		lst = lst->next;
 	}
 	return (__TRUE);
 }
 
-boole	ft_is_smallest(t_list *elm, t_list *lst)
+t_bool	ft_is_smallest(t_list *elm, t_list *lst)
 {
 	if (!lst || !elm)
 		return (__NULL);
@@ -64,7 +64,7 @@ boole	ft_is_smallest(t_list *elm, t_list *lst)
 	return (__TRUE);
 }
 
-boole	ft_is_biggest(t_list *elm, t_list *lst)
+t_bool	ft_is_biggest(t_list *elm, t_list *lst)
 {
 	if (!lst || !elm)
 		return (__NULL);

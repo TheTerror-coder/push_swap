@@ -6,7 +6,7 @@
 /*   By: TheTerror <jfaye@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 12:54:30 by TheTerror         #+#    #+#             */
-/*   Updated: 2023/01/26 18:00:44 by TheTerror        ###   ########lyon.fr   */
+/*   Updated: 2023/01/27 18:22:25 by TheTerror        ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	ft_op_rotate(t_list **list)
 	}
 }
 
-void	ft_rotate(instr instruc, t_list **a, t_list **b)
+void	ft_rotate(t_instr instruc, t_list **a, t_list **b)
 {
 	if (instruc == RA)
 	{
@@ -46,8 +46,6 @@ void	ft_rotate(instr instruc, t_list **a, t_list **b)
 		ft_op_rotate(b);
 		ft_print_instruc(instruc);
 	}
-	else
-		printf("Probléme!!\n");
 }
 
 void	ft_try_rotate(t_list **a, t_list **b)
@@ -57,8 +55,8 @@ void	ft_try_rotate(t_list **a, t_list **b)
 	ft_lstsize(*b) > 1 && \
 	ft_is_smallest(*b, (*b)->next) == __TRUE)
 		ft_rotate(RR, a, b);
-	else if (ft_lstsize(*a) > 1 &&\
-	 ft_is_biggest(*a, (*a)->next) == __TRUE)
+	else if (ft_lstsize(*a) > 1 && \
+	ft_is_biggest(*a, (*a)->next) == __TRUE)
 		ft_rotate(RA, a, b);
 	else if (ft_lstsize(*b) > 1 && ft_is_smallest(*b, (*b)->next) == __TRUE)
 		ft_rotate(RB, a, b);
