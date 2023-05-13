@@ -6,7 +6,7 @@
 /*   By: TheTerror <jfaye@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 14:47:55 by TheTerror         #+#    #+#             */
-/*   Updated: 2023/01/27 18:21:41 by TheTerror        ###   ########lyon.fr   */
+/*   Updated: 2023/05/13 21:50:37 by TheTerror        ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,17 +45,4 @@ void	ft_swap(t_instr instruc, t_list **a, t_list **b)
 		ft_op_swap(b);
 		ft_print_instruc(instruc);
 	}
-}
-
-void	ft_try_swap(t_list **a, t_list **b)
-{
-	ft_try_rev_rotate(a, b);
-	ft_try_rotate(a, b);
-	if (*a && ft_cmp_content(*a, (*a)->next) == SUPERIOR && \
-	*b && ft_cmp_content(*b, (*b)->next) == INFERIOR)
-		ft_swap(SS, a, b);
-	else if (*a && ft_cmp_content(*a, (*a)->next) == SUPERIOR)
-		ft_swap(SA, a, b);
-	else if (*b && ft_cmp_content(*b, (*b)->next) == INFERIOR)
-		ft_swap(SB, a, b);
 }

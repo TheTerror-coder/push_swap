@@ -6,7 +6,7 @@
 /*   By: TheTerror <jfaye@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 20:57:05 by TheTerror         #+#    #+#             */
-/*   Updated: 2023/01/27 18:22:09 by TheTerror        ###   ########lyon.fr   */
+/*   Updated: 2023/05/13 21:49:38 by TheTerror        ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,25 +38,5 @@ void	ft_push(t_instr instruc, t_list **a, t_list **b)
 	{
 		ft_op_push(a, b);
 		ft_print_instruc(instruc);
-	}
-}
-
-void	ft_try_push(t_list **a, t_list **b)
-{
-	if (*a && ft_cmp_content(*a, (*a)->next) == INFERIOR && \
-	ft_is_sorted((*a)->next) == __FALSE)
-	{
-		ft_push(PB, a, b);
-		return ;
-	}
-	if (ft_is_sorted(*a) == __TRUE)
-	{
-		if (ft_rev_sorted(*b) == __TRUE)
-		{
-			while (*b)
-				ft_push(PA, a, b);
-		}
-		else if (*b)
-			ft_push(PA, a, b);
 	}
 }
