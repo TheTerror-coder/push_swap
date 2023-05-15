@@ -6,7 +6,7 @@
 /*   By: TheTerror <jfaye@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 13:38:48 by TheTerror         #+#    #+#             */
-/*   Updated: 2023/05/13 21:50:01 by TheTerror        ###   ########lyon.fr   */
+/*   Updated: 2023/05/15 16:04:18 by TheTerror        ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,22 +32,31 @@ void	ft_op_rev_rotate(t_list **list)
 	}
 }
 
-void	ft_rev_rotate(t_instr instruc, t_list **a, t_list **b)
+void	ft_rev_rotate(t_vars *v, t_instr instruc, t_list **a, t_list **b)
 {
 	if (instruc == RRA)
 	{
 		ft_op_rev_rotate(a);
-		ft_print_instruc(instruc);
+		if (v->final)
+			ft_print_instruc(instruc);
+		else
+			v->count++;
 	}
 	else if (instruc == RRB)
 	{
 		ft_op_rev_rotate(b);
-		ft_print_instruc(instruc);
+		if (v->final)
+			ft_print_instruc(instruc);
+		else
+			v->count++;
 	}
 	else if (instruc == RRR)
 	{
 		ft_op_rev_rotate(a);
 		ft_op_rev_rotate(b);
-		ft_print_instruc(instruc);
+		if (v->final)
+			ft_print_instruc(instruc);
+		else
+			v->count++;
 	}
 }

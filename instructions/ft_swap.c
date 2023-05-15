@@ -6,7 +6,7 @@
 /*   By: TheTerror <jfaye@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 14:47:55 by TheTerror         #+#    #+#             */
-/*   Updated: 2023/05/13 21:50:37 by TheTerror        ###   ########lyon.fr   */
+/*   Updated: 2023/05/15 16:04:18 by TheTerror        ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,22 +27,31 @@ void	ft_op_swap(t_list **list)
 	}
 }
 
-void	ft_swap(t_instr instruc, t_list **a, t_list **b)
+void	ft_swap(t_vars *v, t_instr instruc, t_list **a, t_list **b)
 {
 	if (instruc == SA)
 	{
 		ft_op_swap(a);
-		ft_print_instruc(instruc);
+		if (v->final)
+			ft_print_instruc(instruc);
+		else
+			v->count++;
 	}
 	else if (instruc == SB)
 	{
 		ft_op_swap(b);
-		ft_print_instruc(instruc);
+		if (v->final)
+			ft_print_instruc(instruc);
+		else
+			v->count++;
 	}
 	else if (instruc == SS)
 	{
 		ft_op_swap(a);
 		ft_op_swap(b);
-		ft_print_instruc(instruc);
+		if (v->final)
+			ft_print_instruc(instruc);
+		else
+			v->count++;
 	}
 }

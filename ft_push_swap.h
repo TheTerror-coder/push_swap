@@ -6,7 +6,7 @@
 /*   By: TheTerror <jfaye@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 14:49:43 by TheTerror         #+#    #+#             */
-/*   Updated: 2023/05/13 21:40:42 by TheTerror        ###   ########lyon.fr   */
+/*   Updated: 2023/05/15 15:21:56 by TheTerror        ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,7 @@
 # include "utils/ft_utils.h"
 # include "memtools/ft_memtools.h"
 # include "fst_sorter/ft_fst_sorter.h"
+
+void	ft_prcss_exit(t_vars *v, int msg);
 
 #endif

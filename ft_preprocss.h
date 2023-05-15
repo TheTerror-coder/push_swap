@@ -6,7 +6,7 @@
 /*   By: TheTerror <jfaye@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 18:13:59 by TheTerror         #+#    #+#             */
-/*   Updated: 2023/05/13 21:17:26 by TheTerror        ###   ########lyon.fr   */
+/*   Updated: 2023/05/15 16:08:25 by TheTerror        ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,9 @@
 
 # include "libft/libft.h"
 
-# define __NTR ((void *) 999)//Nothing_To_Report
+# define __NTR 999//Nothing_To_Report
 # define __INT_MIN -2147483648
+# define __INT_MAX 2147483647
 # define __NULL 0
 
 typedef enum e_instr	t_instr;
@@ -40,7 +41,7 @@ enum e_instr
 
 enum e_bool
 {
-	__FALSE = -1,
+	__FALSE = 0,
 	__TRUE = 1
 };
 
@@ -53,8 +54,14 @@ enum e_assert
 
 typedef struct s_vars
 {
+	int		argc;
+	char	**argv;
 	t_list	*a;
 	t_list	*b;
+	t_bool	final;
+	int		count;
+	int		fst;
+	int		snd;
 }				t_vars;
 
 

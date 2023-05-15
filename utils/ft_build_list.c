@@ -6,7 +6,7 @@
 /*   By: TheTerror <jfaye@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 17:47:21 by TheTerror         #+#    #+#             */
-/*   Updated: 2023/01/27 18:17:51 by TheTerror        ###   ########lyon.fr   */
+/*   Updated: 2023/05/15 15:32:47 by TheTerror        ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,18 +24,32 @@ int	*ft_build_content(char *arg)
 	return (content);
 }
 
-void	*ft_build_lst(t_list **lst, int *content)
+int	ft_build_lst(t_list **lst, int *content)
 {
 	t_list	*new;
 
 	if (!content)
-		return (NULL);
+		return (0);
 	new = ft_lstnew(content);
 	if (!new)
 	{
 		ft_freecontent(content);
-		return (NULL);
+		return (0);
 	}
 	ft_lstadd_back(lst, new);
 	return (__NTR);
+}
+
+void	ft_rebuild(t_vars *v)
+{
+	int	i;
+
+	i = 1;
+	ft_lstclear(&v->a, &ft_freecontent);
+	while (i < v->argc)
+	{
+		if (!ft_build_lst(&v->a, ft_build_content(v->argv[i])))
+			ft_prcss_exit(v, EXIT_FAILURE);
+		i++;
+	}
 }
