@@ -14,11 +14,13 @@
 
 void	ft_try_rotate(t_vars *v, t_list **a, t_list **b);
 void	ft_try_rev_rotate(t_vars *v, t_list **a, t_list **b);
+void	ft_enhancexi(t_vars *v);
+void	ft_enhancexj(t_vars *v);
+void	ft_enhancexk(t_vars *v);
+void	ft_enhancexl(t_vars *v);
 
 void	ft_try_swap(t_vars *v, t_list **a, t_list **b)
 {
-	ft_try_rev_rotate(v, a, b);
-	ft_try_rotate(v, a, b);
 	if (*a && ft_cmp_content(*a, (*a)->next) == SUPERIOR && \
 	*b && ft_cmp_content(*b, (*b)->next) == INFERIOR)
 		ft_swap(v, SS, a, b);
@@ -39,10 +41,11 @@ void	ft_try_push(t_vars *v, t_list **a, t_list **b)
 	if (ft_is_sorted(*a) == __TRUE)
 	{
 		if (ft_rev_sorted(*b) == __TRUE)
-		{
 			while (*b)
+			{
 				ft_push(v, PA, a, b);
-		}
+				ft_enhancexj(v);
+			}
 		else if (*b)
 			ft_push(v, PA, a, b);
 	}
@@ -88,6 +91,11 @@ void	ft_try_rotate(t_vars *v, t_list **a, t_list **b)
 
 void	ft_alltry(t_vars *v)
 {
+	ft_enhancexk(v);
+	ft_enhancexi(v);
+	ft_try_rev_rotate(v, &v->a, &v->b);
+	ft_try_rotate(v, &v->a, &v->b);
 	ft_try_swap(v, &v->a, &v->b);
+	ft_enhancexl(v);
 	ft_try_push(v, &v->a, &v->b);
 }

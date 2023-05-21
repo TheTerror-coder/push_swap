@@ -6,14 +6,14 @@
 /*   By: TheTerror <jfaye@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 15:55:38 by TheTerror         #+#    #+#             */
-/*   Updated: 2023/05/19 19:11:28 by TheTerror        ###   ########lyon.fr   */
+/*   Updated: 2023/05/21 13:11:23 by TheTerror        ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_3rd_sorter.h"
 
 void	ft_lnchpa(t_vars *v);
-int	ft_asmallest(t_vars *v, t_list *a);
+int		ft_asmallest(t_vars *v, t_list *a);
 void	ft_lnchrot(t_vars *v, t_instr instr);
 
 void	ft_sort_typa(t_vars *v)

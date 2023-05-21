@@ -6,7 +6,7 @@
 #    By: TheTerror <jfaye@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/18 19:26:46 by TheTerror         #+#    #+#              #
-#    Updated: 2023/05/19 16:03:34 by TheTerror        ###   ########lyon.fr    #
+#    Updated: 2023/05/21 14:03:08 by TheTerror        ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,7 @@ CFLAGS = 	-Wall -Werror -Wextra
 CC = 		cc
 RM = 		rm -rf
 
-SRC_1ST_SORTER = $(addprefix $(_1ST_SORTER_PATH), ft_1st_algo.c ft_1st_try.c)
+SRC_1ST_SORTER = $(addprefix $(_1ST_SORTER_PATH), ft_1st_algo.c ft_1st_try.c ft_enhance.c)
 SRC_2ND_SORTER = $(addprefix $(_2ND_SORTER_PATH), ft_2nd_algo.c ft_2nd_utils.c)
 SRC_3RD_SORTER = $(addprefix $(_3RD_SORTER_PATH), ft_3rd_algo.c)
 SRC_ULIST_TOOLS = $(addprefix $(ULIST_TOOLS_PATH), ft_mkulist.c ft_utilsmk.c)

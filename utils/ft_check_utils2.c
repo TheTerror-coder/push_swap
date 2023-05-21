@@ -6,7 +6,7 @@
 /*   By: TheTerror <jfaye@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 13:08:58 by TheTerror         #+#    #+#             */
-/*   Updated: 2023/05/19 19:04:01 by TheTerror        ###   ########lyon.fr   */
+/*   Updated: 2023/05/21 11:52:24 by TheTerror        ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ t_bool	ft_is_biggest(t_list *elm, t_list *lst)
 {
 	if (!lst || !elm)
 		return (__NULL);
-	while (lst && lst != elm)
+	while (lst)
 	{
 		if (ft_cmp_content(elm, lst) == INFERIOR)
 			return (__FALSE);
