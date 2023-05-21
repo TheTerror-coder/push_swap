@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_fsttry.c                                        :+:      :+:    :+:   */
+/*   ft_1st_try.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: TheTerror <jfaye@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,7 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_fst_sorter.h"
+#include "ft_1st_sorter.h"
+
+void	ft_try_rotate(t_vars *v, t_list **a, t_list **b);
+void	ft_try_rev_rotate(t_vars *v, t_list **a, t_list **b);
 
 void	ft_try_swap(t_vars *v, t_list **a, t_list **b)
 {
@@ -81,4 +84,10 @@ void	ft_try_rotate(t_vars *v, t_list **a, t_list **b)
 		ft_rotate(v, RA, a, b);
 	else if (ft_lstsize(*b) > 1 && ft_is_smallest(*b, (*b)->next) == __TRUE)
 		ft_rotate(v, RB, a, b);
+}
+
+void	ft_alltry(t_vars *v)
+{
+	ft_try_swap(v, &v->a, &v->b);
+	ft_try_push(v, &v->a, &v->b);
 }

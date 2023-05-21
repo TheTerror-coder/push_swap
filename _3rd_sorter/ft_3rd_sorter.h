@@ -1,32 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_initmem.c                                       :+:      :+:    :+:   */
+/*   ft_3rd_sorter.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: TheTerror <jfaye@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/13 20:56:06 by TheTerror         #+#    #+#             */
-/*   Updated: 2023/05/19 18:57:56 by TheTerror        ###   ########lyon.fr   */
+/*   Created: 2023/05/19 15:54:44 by TheTerror         #+#    #+#             */
+/*   Updated: 2023/05/19 16:42:36 by TheTerror        ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_memtools.h"
+#ifndef FT_3RD_SORTER_H
+# define FT_3RD_SORTER_H
 
-t_vars	*ft_init_tvars(int argc, char **argv)
-{
-	t_vars	*v;
+# include "../ft_push_swap.h"
 
-	v = NULL;
-	v = ft_calloc(1, sizeof(t_vars));
-	if (!v)
-		return (NULL);
-	v->argc = argc;
-	v->argv =argv;
-	v->a = NULL;	
-	v->b = NULL;
-	v->final = __FALSE;
-	v->_1st = __INT_MAX;
-	v->_2nd = __INT_MAX;
-	v->_3rd = __INT_MAX;
-	return (v);
-}
+void	ft_sort_typa(t_vars *v);
+
+#endif

@@ -6,7 +6,7 @@
 /*   By: TheTerror <jfaye@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 18:13:59 by TheTerror         #+#    #+#             */
-/*   Updated: 2023/05/15 16:08:25 by TheTerror        ###   ########lyon.fr   */
+/*   Updated: 2023/05/19 15:57:34 by TheTerror        ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,9 +59,21 @@ typedef struct s_vars
 	t_list	*a;
 	t_list	*b;
 	t_bool	final;
+	t_bool	flg;
 	int		count;
-	int		fst;
-	int		snd;
+	int		_1st;
+	int		_2nd;
+	int		_3rd;
+	int		nth;
+	int		max_bit;
+	int		len;
+	int		*ulst;
+	int		vmin;
+	int		vinf;
+	int		vsup;
+	int		val;
+	int		at_i;
+	int		inc;
 }				t_vars;
 
 
