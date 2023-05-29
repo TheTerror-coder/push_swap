@@ -6,7 +6,7 @@
 /*   By: TheTerror <jfaye@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 12:58:35 by TheTerror         #+#    #+#             */
-/*   Updated: 2023/05/19 14:52:28 by TheTerror        ###   ########lyon.fr   */
+/*   Updated: 2023/05/22 14:47:45 by TheTerror        ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_2ndtryout(t_vars *v);
 void	ft_set_mxbit(t_vars *v);
 int		ft_nthbit(int *content, int nth);
 
-void	ft_sort_big(t_vars *v)
+void	ft_sort_bigone(t_vars *v)
 {
 	int	i;
 

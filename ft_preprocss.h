@@ -6,7 +6,7 @@
 /*   By: TheTerror <jfaye@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 18:13:59 by TheTerror         #+#    #+#             */
-/*   Updated: 2023/05/21 18:57:42 by TheTerror        ###   ########lyon.fr   */
+/*   Updated: 2023/05/26 14:23:58 by TheTerror        ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,7 @@ typedef struct s_vars
 	int		_1st2;
 	int		_2nd;
 	int		_3rd;
+	int		_4th;
 	int		nth;
 	int		max_bit;
 	int		len;
@@ -75,6 +76,16 @@ typedef struct s_vars
 	int		val;
 	int		at_i;
 	int		inc;
+	int		chunks;
+	int		hold_st;
+	int		hold_nd;
+	t_list	*elm_st;
+	t_list	*elm_nd;
+	t_list	*elm;
+	int		holded;
+	t_instr	inst_st;
+	t_instr	inst_nd;
+	t_instr	inst;
 }				t_vars;
 
 
