@@ -6,7 +6,7 @@
 /*   By: TheTerror <jfaye@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 14:44:56 by TheTerror         #+#    #+#             */
-/*   Updated: 2023/05/29 16:03:23 by TheTerror        ###   ########lyon.fr   */
+/*   Updated: 2023/05/29 20:06:11 by TheTerror        ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,39 +22,33 @@ void	ft_sort_bigtwo_op(t_vars *v);
 
 void	ft_sort_bigtwo(t_vars *v)
 {
+	int	i;
 	int	len;
 	int	chunk;
+	int	chstep;
 
-v->final = __FALSE;
+	i = -2;
 	len = __INT_MAX;
-	v->chunks = 5 - 2;
-	ft_sort_bigtwo_op(v);
-	if (v->count < len)
-		chunk = v->chunks;
-	len = v->count;
-	v->chunks = 5 - 1;
-	ft_sort_bigtwo_op(v);
-	if (v->count < len)
-		chunk = v->chunks;
-	len = v->count;
-	v->chunks = 5;
-	ft_sort_bigtwo_op(v);
-	if (v->count < len)
-		chunk = v->chunks;
-	len = v->count;
-	v->chunks = 5 + 1;
-	ft_sort_bigtwo_op(v);
-	if (v->count < len)
-		chunk = v->chunks;
-	len = v->count;
-	v->chunks = 5 + 2;
-	ft_sort_bigtwo_op(v);
-	if (v->count < len)
-		chunk = v->chunks;
+	if (v->len < 250)
+		chstep = 5;
+	else
+		chstep = 11;
+v->final = __FALSE;
+	while (i < 3)
+	{
+		v->chunks = chstep + i;
+		ft_sort_bigtwo_op(v);
+		if (v->count < len)
+		{
+			chunk = v->chunks;
+			len = v->count;
+		}
+		i++;
+	}
 v->final = __TRUE;
 	v->chunks = chunk;
+	// v->chunks = 5;
 	ft_sort_bigtwo_op(v);
-
 }
 
 void	ft_sort_bigtwo_op(t_vars *v)
