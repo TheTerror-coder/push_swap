@@ -6,11 +6,14 @@
 #    By: TheTerror <jfaye@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/18 19:26:46 by TheTerror         #+#    #+#              #
-#    Updated: 2023/05/30 21:39:43 by TheTerror        ###   ########lyon.fr    #
+#    Updated: 2023/05/31 16:02:32 by TheTerror        ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
+
+LIBFT_A = $(LIBFT_PATH)libft.a
+
 UTILS_PATH = ./utils/
 MEMTOOLS_PATH = ./memtools/
 _1ST_SORTER_PATH = ./_1st_sorter/
@@ -20,6 +23,7 @@ _4TH_SORTER_PATH = ./_4th_sorter/
 ULIST_TOOLS_PATH = ./ulist_tools/
 INSTRUCTIONS_PATH = ./instructions/
 LIBFT_PATH = ./libft/
+
 
 INCLUDE = 	ft_push_swap.h ft_preprocss.h $(LIBFT_PATH)libft.h $(UTILS_PATH)ft_utils.h \
 			$(INSTRUCTIONS_PATH)ft_instructions.h $(MEMTOOLS_PATH)ft_memtools.h \
@@ -49,15 +53,16 @@ SRC = 	ft_push_swap.c $(SRC_UTILS) $(SRC_INSTRUCTIONS) $(SRC_MEMTOOLS) $(SRC_1ST
 
 OBJ = $(SRC:.c=.o)
 
-all : $(NAME)
+all : make_libft $(NAME)
 
-%.o : %.c $(INCLUDE)
+%.o : %.c $(INCLUDE) $(LIBFT_A)
 	$(CC) $(CFLAGS) -c -o $@ $<
 
-$(NAME) : $(OBJ) $(INCLUDE)
+make_libft :
 	make -C $(LIBFT_PATH)
-	cp $(LIBFT_PATH)/libft.a .
-	$(CC) $(CFLAGS) $(SRC) $(INCLUDE) libft.a -o $(NAME)
+
+$(NAME) : $(OBJ) $(INCLUDE)
+	$(CC) $(CFLAGS) $(SRC) $(LIBFT_A) $(INCLUDE) -o $(NAME)
 
 clean :
 	make clean -C $(LIBFT_PATH)

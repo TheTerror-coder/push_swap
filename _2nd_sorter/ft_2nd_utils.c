@@ -6,7 +6,7 @@
 /*   By: TheTerror <jfaye@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 14:49:48 by TheTerror         #+#    #+#             */
-/*   Updated: 2023/05/19 14:52:17 by TheTerror        ###   ########lyon.fr   */
+/*   Updated: 2023/05/31 15:31:44 by TheTerror        ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int	ft_nthbit(int *content, int nth)
 	int	x;
 
 	n = *content;
-	x = n>>nth;
+	x = n >> nth;
 	return (x & 1);
 }
 

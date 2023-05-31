@@ -6,7 +6,7 @@
 /*   By: TheTerror <jfaye@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 13:32:08 by TheTerror         #+#    #+#             */
-/*   Updated: 2023/05/18 17:57:18 by TheTerror        ###   ########lyon.fr   */
+/*   Updated: 2023/05/31 15:37:17 by TheTerror        ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,6 @@ void	ft_setvmin_0(t_vars *v)
 	}
 	v->vmin = v->val;
 }
-
 
 void	ft_setvmin_in(t_vars *v)
 {

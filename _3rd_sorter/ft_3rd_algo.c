@@ -6,7 +6,7 @@
 /*   By: TheTerror <jfaye@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 15:55:38 by TheTerror         #+#    #+#             */
-/*   Updated: 2023/05/21 13:11:23 by TheTerror        ###   ########lyon.fr   */
+/*   Updated: 2023/05/31 15:32:22 by TheTerror        ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ void	ft_sort_typa(t_vars *v)
 		ft_lnchpa(v);
 	v->_3rd = v->count;
 }
+
 void	ft_lnchrot(t_vars *v, t_instr instr)
 {
 	while ((*((int *) v->a->content)) != v->vmin)

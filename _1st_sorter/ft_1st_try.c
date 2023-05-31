@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_1st_try.c                                        :+:      :+:    :+:   */
+/*   ft_1st_try.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: TheTerror <jfaye@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/13 21:48:16 by TheTerror         #+#    #+#             */
-/*   Updated: 2023/05/15 15:26:35 by TheTerror        ###   ########lyon.fr   */
+/*   Updated: 2023/05/31 15:29:51 by TheTerror        ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,11 +41,13 @@ void	ft_try_push(t_vars *v, t_list **a, t_list **b)
 	if (ft_is_sorted(*a) == __TRUE)
 	{
 		if (ft_rev_sorted(*b) == __TRUE)
+		{
 			while (*b)
 			{
 				ft_push(v, PA, a, b);
 				ft_enhancexj(v);
 			}
+		}
 		else if (*b)
 			ft_push(v, PA, a, b);
 	}

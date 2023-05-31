@@ -6,7 +6,7 @@
 /*   By: TheTerror <jfaye@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 21:13:26 by TheTerror         #+#    #+#             */
-/*   Updated: 2023/05/30 21:21:10 by TheTerror        ###   ########lyon.fr   */
+/*   Updated: 2023/05/31 15:35:12 by TheTerror        ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,11 +43,12 @@ void	ft_looprot(t_vars *v, int i, t_instr inst)
 	{
 		if (inst == RB)
 			ft_rotate(v, inst, &v->a, &v->b);
-		else if(inst == RRB)
+		else if (inst == RRB)
 			ft_rev_rotate(v, inst, &v->a, &v->b);
 		x++;
 	}
 }
+
 void	ft_drivebig_up(t_vars *v)
 {
 	int		i;

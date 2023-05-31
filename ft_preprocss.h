@@ -6,7 +6,7 @@
 /*   By: TheTerror <jfaye@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 18:13:59 by TheTerror         #+#    #+#             */
-/*   Updated: 2023/05/31 14:47:42 by TheTerror        ###   ########lyon.fr   */
+/*   Updated: 2023/05/31 15:40:35 by TheTerror        ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,5 @@ typedef struct s_vars
 	t_instr	inst_nd;
 	t_instr	inst;
 }				t_vars;
-
 
 #endif

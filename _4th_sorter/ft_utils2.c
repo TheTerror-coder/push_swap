@@ -6,7 +6,7 @@
 /*   By: TheTerror <jfaye@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 18:39:24 by TheTerror         #+#    #+#             */
-/*   Updated: 2023/05/30 21:21:05 by TheTerror        ###   ########lyon.fr   */
+/*   Updated: 2023/05/31 15:34:22 by TheTerror        ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,8 @@ void	ft_swtch1(t_vars *v, t_list *elm)
 	int	i;
 
 	i = 0;
-	if (ft_lstsize(v->b) > 1 && (ft_is_smallest(elm, v->b) || ft_is_biggest(elm, v->b)))
+	if (ft_lstsize(v->b) > 1 && \
+			(ft_is_smallest(elm, v->b) || ft_is_biggest(elm, v->b)))
 	{
 		if (!ft_is_biggest(v->b, v->b))
 		{
@@ -56,7 +57,7 @@ void	ft_swtch1(t_vars *v, t_list *elm)
 		}
 		return ;
 	}
-	else if (ft_lstsize(v->b) > 1 &&  !(v->val > *((int *) v->b->content) && \
+	else if (ft_lstsize(v->b) > 1 && !(v->val > *((int *) v->b->content) && \
 			v->val < *((int *) ft_lstlast(v->b)->content)))
 	{
 		ft_getiinf(v, &i);
@@ -70,7 +71,8 @@ void	ft_swtch2(t_vars *v, t_list *elm)
 	int	i;
 
 	i = 0;
-	if (ft_lstsize(v->b) > 1 && (ft_is_smallest(elm, v->b) || ft_is_biggest(elm, v->b)))
+	if (ft_lstsize(v->b) > 1 && \
+			(ft_is_smallest(elm, v->b) || ft_is_biggest(elm, v->b)))
 	{
 		if (!ft_is_biggest(v->b, v->b))
 		{

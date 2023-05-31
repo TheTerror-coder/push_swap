@@ -6,7 +6,7 @@
 /*   By: TheTerror <jfaye@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/13 20:56:06 by TheTerror         #+#    #+#             */
-/*   Updated: 2023/05/30 23:08:00 by TheTerror        ###   ########lyon.fr   */
+/*   Updated: 2023/05/31 15:36:56 by TheTerror        ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ t_vars	*ft_init_tvars(int argc)
 		return (NULL);
 	v->argc = argc;
 	v->argv = NULL;
-	v->a = NULL;	
+	v->a = NULL;
 	v->b = NULL;
 	v->final = __FALSE;
 	v->_1st = __INT_MAX;

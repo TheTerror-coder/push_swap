@@ -6,7 +6,7 @@
 /*   By: TheTerror <jfaye@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 13:30:46 by TheTerror         #+#    #+#             */
-/*   Updated: 2023/05/18 18:28:29 by TheTerror        ###   ########lyon.fr   */
+/*   Updated: 2023/05/31 15:38:40 by TheTerror        ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ void	ft_rset_ulstutils(t_vars *v);
 
 void	ft_mka_ulst(t_vars *v)
 {
-
 	ft_rset_ulstutils(v);
 	v->ulst = ft_calloc(ft_lstsize(v->a), sizeof(int));
 	if (!v->ulst)
@@ -39,7 +38,6 @@ void	ft_mka_ulst(t_vars *v)
 		ft_setvmin_in(v);
 	}
 	ft_reseta(v);
-
 	free(v->ulst);
 	v->ulst = NULL;
 }
@@ -80,11 +78,6 @@ void	ft_reseta(t_vars *v)
 	a = v->a;
 	while (a)
 	{
-		// free(a->content);
-		// a->content = NULL;
-		// a->content = ft_calloc(1, sizeof(int));
-		// if (!a->content)
-		// 	ft_prcss_exit(v, EXIT_FAILURE);
 		*((int *) a->content) = v->ulst[i];
 		i++;
 		a = a->next;
