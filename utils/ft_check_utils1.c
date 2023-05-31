@@ -6,7 +6,7 @@
 /*   By: TheTerror <jfaye@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 17:41:23 by TheTerror         #+#    #+#             */
-/*   Updated: 2023/01/27 17:30:16 by TheTerror        ###   ########lyon.fr   */
+/*   Updated: 2023/05/31 14:29:34 by TheTerror        ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,10 +67,16 @@ t_bool	ft_is_int(char *arg)
 	int	i;
 
 	i = 0;
+	if (!ft_isascii(arg[i]))
+		return (__FALSE);
 	if (arg[i] == '+' || arg[i] == '-')
 		i++;
+	if (!arg[i])
+		return (__FALSE);
 	while (arg[i])
 	{
+		if (!ft_isascii(arg[i]))
+			return (__FALSE);
 		if (ft_isalnum(arg[i]) != 1)
 			return (__FALSE);
 		i++;

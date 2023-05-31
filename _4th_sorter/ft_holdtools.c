@@ -6,7 +6,7 @@
 /*   By: TheTerror <jfaye@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 14:57:55 by TheTerror         #+#    #+#             */
-/*   Updated: 2023/05/29 15:37:20 by TheTerror        ###   ########lyon.fr   */
+/*   Updated: 2023/05/30 21:05:01 by TheTerror        ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,6 @@ void	ft_check_ndpos(t_vars *v);
 
 t_bool	ft_sethold(t_vars *v)
 {
-	v->holded = -1;
-	v->val = -1;
 	v->inst_st = RA;
 	v->inst_nd = RA;
 	v->inst = RA;
@@ -46,30 +44,6 @@ t_bool	ft_sethold(t_vars *v)
 		v->inst = v->inst_st;
 		v->val = *((int *) v->elm_st->content);
 	}
-// printf("\nvinf: %d vsup: %d instruc: %d val: %d\n", v->vinf, v->vsup, v->inst, v->val);
-// printf("\nhold_st: %d hold_nd: %d holded: %d\n", v->hold_st, v->hold_nd, v->holded);
-// t_list	*a;
-
-// a = v->a;
-// if (v->val == 17)
-// {
-// printf("\nelm_st: %d elm_nd: %d elm: %d\n", *((int *) v->elm_st->content), *((int *) v->elm_nd->content), *((int *) v->elm->content));
-// a = v->a;
-// while (a)
-// {
-// 	printf("%d ", *((int *) a->content));
-// 	a = a->next;
-// }
-// printf("\n");
-// a = v->b;
-// while (a)
-// {
-// 	printf("%d ", *((int *) a->content));
-// 	a = a->next;
-// }
-// printf("\n");
-// ft_prcss_exit(v, EXIT_FAILURE);
-// }
 	return (__TRUE);
 }
 

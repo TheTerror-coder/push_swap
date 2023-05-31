@@ -6,7 +6,7 @@
 #    By: TheTerror <jfaye@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/18 19:26:46 by TheTerror         #+#    #+#              #
-#    Updated: 2023/05/23 18:40:15 by TheTerror        ###   ########lyon.fr    #
+#    Updated: 2023/05/30 21:39:43 by TheTerror        ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,7 +36,7 @@ SRC_1ST_SORTER = $(addprefix $(_1ST_SORTER_PATH), ft_1st_algo.c ft_1st_try.c ft_
 SRC_2ND_SORTER = $(addprefix $(_2ND_SORTER_PATH), ft_2nd_algo.c ft_2nd_utils.c)
 SRC_3RD_SORTER = $(addprefix $(_3RD_SORTER_PATH), ft_3rd_algo.c)
 SRC_4TH_SORTER = $(addprefix $(_4TH_SORTER_PATH), ft_4th_algo.c ft_holdtools.c ft_utils1.c \
-			ft_utils2.c)
+			ft_utils2.c ft_utils3.c ft_utils4.c)
 SRC_ULIST_TOOLS = $(addprefix $(ULIST_TOOLS_PATH), ft_mkulist.c ft_utilsmk.c)
 SRC_MEMTOOLS = $(addprefix $(MEMTOOLS_PATH), ft_initmem.c ft_freemem.c)
 SRC_UTILS = $(addprefix $(UTILS_PATH), ft_check_utils1.c ft_build_list.c \
@@ -56,7 +56,6 @@ all : $(NAME)
 
 $(NAME) : $(OBJ) $(INCLUDE)
 	make -C $(LIBFT_PATH)
-	make bonus -C $(LIBFT_PATH)
 	cp $(LIBFT_PATH)/libft.a .
 	$(CC) $(CFLAGS) $(SRC) $(INCLUDE) libft.a -o $(NAME)
 

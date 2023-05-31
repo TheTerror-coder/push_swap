@@ -6,7 +6,7 @@
 /*   By: TheTerror <jfaye@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 12:58:35 by TheTerror         #+#    #+#             */
-/*   Updated: 2023/05/22 14:47:45 by TheTerror        ###   ########lyon.fr   */
+/*   Updated: 2023/05/30 19:50:41 by TheTerror        ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,17 +49,3 @@ void	ft_2ndtryout(t_vars *v)
 	else
 		ft_rotate(v, RA, &v->a, &v->b);
 }
-
-// t_list	*a;
-// if (v->nth == v->max_bit - 2)
-// {
-
-// a = v->a;
-// while (a)
-// {
-// 	ft_putnbr_fd(*((int *) a->content), 1);
-// ft_putendl_fd("", 1);
-// 	a = a->next;
-// }
-// ft_prcss_exit(v, EXIT_FAILURE);
-// }

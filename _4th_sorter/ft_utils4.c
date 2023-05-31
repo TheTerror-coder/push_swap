@@ -1,21 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memtools.h                                      :+:      :+:    :+:   */
+/*   ft_utils4.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: TheTerror <jfaye@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/13 20:56:28 by TheTerror         #+#    #+#             */
-/*   Updated: 2023/05/30 22:04:25 by TheTerror        ###   ########lyon.fr   */
+/*   Created: 2023/05/30 21:19:45 by TheTerror         #+#    #+#             */
+/*   Updated: 2023/05/30 21:20:19 by TheTerror        ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_MEMTOOLS_H
-# define FT_MEMTOOLS_H
+#include "ft_4th_sorter.h"
 
-# include "../ft_push_swap.h"
-
-t_vars	*ft_init_tvars(int argc);
-void	ft_free_tvars(t_vars *v);
-
-#endif
+void	ft_looppusha(t_vars *v)
+{
+	while (ft_lstsize(v->b))
+		ft_push(v, PA, &v->a, &v->b);
+}
+void	ft_init4thtools(t_vars *v)
+{
+	v->vinf = 0;
+	v->vsup = (v->len / v->chunks);
+	v->holded = -1;
+	v->hold_st = -1;
+	v->hold_nd = -1;
+	if (v->chunks > v->len)
+		ft_prcss_exit(v, EXIT_FAILURE);
+}

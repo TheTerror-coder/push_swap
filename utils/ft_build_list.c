@@ -6,7 +6,7 @@
 /*   By: TheTerror <jfaye@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 17:47:21 by TheTerror         #+#    #+#             */
-/*   Updated: 2023/05/15 15:32:47 by TheTerror        ###   ########lyon.fr   */
+/*   Updated: 2023/05/31 13:00:21 by TheTerror        ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,9 +44,9 @@ void	ft_rebuild(t_vars *v)
 {
 	int	i;
 
-	i = 1;
+	i = 0;
 	ft_lstclear(&v->a, &ft_freecontent);
-	while (i < v->argc)
+	while (v->argv[i])
 	{
 		if (!ft_build_lst(&v->a, ft_build_content(v->argv[i])))
 			ft_prcss_exit(v, EXIT_FAILURE);
