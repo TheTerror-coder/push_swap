@@ -6,11 +6,9 @@
 /*   By: TheTerror <jfaye@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 14:47:55 by TheTerror         #+#    #+#             */
-/*   Updated: 2023/05/15 16:04:18 by TheTerror        ###   ########lyon.fr   */
+/*   Updated: 2023/06/06 16:51:42 by TheTerror        ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
-
-/*Intervertit les 2 premiers éléments au sommet de la liste*/
 
 #include "ft_instructions.h"
 

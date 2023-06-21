@@ -6,12 +6,9 @@
 /*   By: TheTerror <jfaye@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 12:54:30 by TheTerror         #+#    #+#             */
-/*   Updated: 2023/05/15 16:04:18 by TheTerror        ###   ########lyon.fr   */
+/*   Updated: 2023/06/06 16:51:34 by TheTerror        ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
-
-/*Décale d’une position vers le haut tous les élements de la liste.
-Le premier élément devient le dernier.*/
 
 #include "ft_instructions.h"
 

@@ -6,12 +6,9 @@
 /*   By: TheTerror <jfaye@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 20:57:05 by TheTerror         #+#    #+#             */
-/*   Updated: 2023/05/21 20:20:55 by TheTerror        ###   ########lyon.fr   */
+/*   Updated: 2023/06/06 16:51:21 by TheTerror        ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
-
-/*Prend le premier élément au sommet de la liste source et le met sur
-la deuxiéme liste*/
 
 #include "ft_instructions.h"
 

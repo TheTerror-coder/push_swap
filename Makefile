@@ -6,7 +6,7 @@
 #    By: TheTerror <jfaye@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/18 19:26:46 by TheTerror         #+#    #+#              #
-#    Updated: 2023/06/02 15:05:55 by TheTerror        ###   ########lyon.fr    #
+#    Updated: 2023/06/13 15:38:53 by TheTerror        ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -62,7 +62,7 @@ make_libft :
 	make -C $(LIBFT_PATH)
 
 $(NAME) : $(OBJ) $(INCLUDE)
-	$(CC) $(CFLAGS) $(SRC) $(LIBFT_A) $(INCLUDE) -o $(NAME)
+	$(CC) $(CFLAGS) $(OBJ) $(LIBFT_A) $(INCLUDE) -o $(NAME)
 
 clean :
 	make clean -C $(LIBFT_PATH)

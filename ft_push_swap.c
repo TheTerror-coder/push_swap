@@ -6,7 +6,7 @@
 /*   By: TheTerror <jfaye@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 17:53:55 by TheTerror         #+#    #+#             */
-/*   Updated: 2023/05/31 15:43:28 by TheTerror        ###   ########lyon.fr   */
+/*   Updated: 2023/06/06 18:29:41 by TheTerror        ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ void	ft_iter_args(t_vars *v, t_list **lst, int argc, char **argv)
 	int		i;
 
 	if (argc < 2)
-		ft_prcss_exit(v, EXIT_FAILURE);
+		ft_prcss_exit(v, EXIT_SUCCESS);
 	ft_init_argv(v, argc, argv);
 	i = 0;
 	while (v->argv[i])

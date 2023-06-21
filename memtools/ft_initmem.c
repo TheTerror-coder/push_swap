@@ -6,7 +6,7 @@
 /*   By: TheTerror <jfaye@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/13 20:56:06 by TheTerror         #+#    #+#             */
-/*   Updated: 2023/06/02 16:36:11 by TheTerror        ###   ########lyon.fr   */
+/*   Updated: 2023/06/14 14:14:16 by TheTerror        ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ void	ft_init_argv(t_vars *v, int argc, char **argv)
 	i = 2;
 	args = NULL;
 	if (!ft_strlen(argv[1]))
-		ft_prcss_exit(v, EXIT_FAILURE);
+		ft_prcss_exit(v, EXIT_SUCCESS);
 	args = ft_strdup(argv[1]);
 	if (!args)
 		ft_prcss_exit(v, EXIT_FAILURE);
@@ -72,4 +72,6 @@ void	ft_init_argv(t_vars *v, int argc, char **argv)
 	free(args);
 	if (!v->argv)
 		ft_prcss_exit(v, EXIT_FAILURE);
+	if (!v->argv[0])
+		ft_prcss_exit(v, EXIT_SUCCESS);
 }
